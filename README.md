@@ -1,7 +1,7 @@
 # Deploy MongoDB & Mongo Express on Kubernetes
 
 A simple Kubernetes project that deploys **MongoDB** and **Mongo Express** using Kubernetes Deployments, Services, Secrets, and ConfigMaps.
-<img width="1255" height="945" alt="image" src="https://github.com/user-attachments/assets/a6809112-b815-4e20-aaa0-2f5e451d45f3" />
+<img width="1244" height="955" alt="image" src="https://github.com/user-attachments/assets/da9510e3-22e4-4c02-97e6-5a35bf449062" />
 
 ## 📌 Project Overview
 
