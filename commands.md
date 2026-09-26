@@ -38,13 +38,13 @@
 
 #### port-forwardings
 ###### Prometheus-UI
-    kubectl port-forward service/prometheus-kube-prometheus-prometheus 9090
+    kubectl port-forward svc/prometheus-kube-prometheus-prometheus 9090:9090 --address=0.0.0.0
 
 ###### Alert Manager UI
-    kubectl port-forward svc/prometheus-kube-prometheus-alertmanager 9093
+    kubectl port-forward svc/prometheus-kube-prometheus-alertmanager 9093:9093 --address=0.0.0.0
 
 ###### Grafana
-    kubectl port-forward deployment/prometheus-grafana 3000
+    kubectl port-forward deployment/prometheus-grafana 3000:3000 --address=0.0.0.0
 
 ###### Grafana Dashboard credentials
     user: admin
