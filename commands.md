@@ -44,11 +44,12 @@
     kubectl port-forward svc/prometheus-kube-prometheus-alertmanager 9093:9093 --address=0.0.0.0
 
 ###### Grafana
-    kubectl port-forward deployment/prometheus-grafana 3000:3000 --address=0.0.0.0
+    kubectl port-forward deployment/prometheus-grafana 3000:3000  --address=0.0.0.0
 
 ###### Grafana Dashboard credentials
     user: admin
-    pwd: prom-operator (from values.yaml file set as default)
+    pwd: kubectl get secret prometheus-grafana \
+  -o jsonpath="{.data.admin-password}" | base64 --decode
 
 ###### Mongodb-exporter 
     kubectl port-forward service/mongodb-exporter-prometheus-mongodb-exporter 9216  
